@@ -1,0 +1,10 @@
+<h2>Actualizar una pelicula</h2>
+<form action="/movie/update/{{movie.id}}" method="post">
+    <input type="text" name="title" placeholder="Ingrese un nombre" value="{{ movie.title }}">
+    <input type="date" name="premiere" placeholder="Ingrese fecha de estreno", value="{{ movie.premiere }}">
+    <input type="text" name="director" placeholder="Ingrese director" value="{{ movie.director }}">    
+    <input type="text" name="description" placeholder="Ingrese una descripción" value="{{ movie.description }}">
+    <input type="text" name="music" placeholder="Ingrese musico" value="{{ movie.music }}">        
+    <input type="text" name="writer" placeholder="Ingrese escritor" value="{{ movie.writer }}">    
+    <button>Guardar</button>
+</form>
