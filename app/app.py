@@ -1,6 +1,7 @@
 from flask import Flask
 from .routes.locations import locations
 from .routes.movies import movies
+from .routes.api.locations import api_locations
 #from flask_sqlalchemy import SQLAlchemy
 from .utils.db import db
 from config import DATABASE_CONNECTION_URI
@@ -15,6 +16,11 @@ def create_app():
     ##Registro de rutas
     app.register_blueprint(locations)
     app.register_blueprint(movies)
+
+    ##Rutas para la API
+    app.register_blueprint(api_locations)
+
+    
     return app
 
 app = create_app()

@@ -1,4 +1,5 @@
 from app.utils.db import db
+from app.models.movie import Movie
 
 class Location(db.Model):
 
@@ -15,3 +16,14 @@ class Location(db.Model):
         self.climate = climate
         self.terrain = terrain
         self.id_movie = movie
+
+    def to_dict(self):
+        movie = Movie.query.get(self.id_movie)
+
+        return {
+            'id': self.id,
+            'name': self.name,
+            'climate': self.climate,
+            'terrain': self.terrain,
+            'movie': movie.title
+        }

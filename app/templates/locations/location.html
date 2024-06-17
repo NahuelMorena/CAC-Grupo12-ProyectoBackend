@@ -1,0 +1,28 @@
+<h1>Pagina de ubicaciones</h1>
+<h2>Crear una ubicacion</h2>
+<form action="/location/new" method="post">
+    <input type="text" name="name" placeholder="Ingrese un nombre">
+    <input type="text" name="climate" placeholder="Ingrese clima">
+    <input type="text" name="terrain" placeholder="Ingrese terreno">    
+    <select name="id_movie" id="movie">
+        {% for movie in movies %}
+        <option value="{{movie.id}}">{{movie.title}}</option>
+        {% endfor %}
+    </select>
+    <button>Guardar</button>
+</form>
+
+<div>
+    <h2>Listado de ubicaciones</h2>
+    <ul>
+        {% for location in locations %}
+        <h3>{{ location.name }}</h3>
+        <div>
+            <a href="{{ url_for('locations.update', id = location.id) }}">Actualizar</a>
+            <a href="{{ url_for('locations.delete', id = location.id) }}">Borrar</a>
+        </div>
+        <p>Clima: {{ location.climate }}</p>
+        <p>Terreno: {{ location.terrain }}</p>
+        {% endfor %}
+    </ul>
+</div>

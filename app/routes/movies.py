@@ -9,7 +9,7 @@ path = '/movie'
 @movies.route(path)
 def index():
     movies = Movie.query.all()
-    return render_template('movie.html', movies=movies)
+    return render_template('movies/movie.html', movies=movies)
 
 @movies.route(path +'/new', methods=['POST'])
 def new():
@@ -44,7 +44,7 @@ def update(id):
 
         return redirect(url_for('movies.index'))
      
-    return render_template('update.html', movie = movie)
+    return render_template('movies/update.html', movie = movie)
 
 @movies.route(path+'/delete/<id>')
 def delete(id):
