@@ -7,16 +7,17 @@ class Location(db.Model):
     name = db.Column(db.String(255), nullable=False)
     climate = db.Column(db.String(255), nullable=False)
     terrain = db.Column(db.String(255), nullable=False)
-    image = db.Column(db.String(255), nullable=False)
+    image = db.Column(db.String(1000), nullable=False)
     id_movie = db.Column(db.Integer, db.ForeignKey('movie.id'),nullable=False)
     movie = db.relationship("Movie", back_populates="locations")
 
-    def __init__(self, name, climate, terrain, image, movie):
+    def __init__(self, name, climate, terrain, image, movie, id=None):
         self.name = name
         self.climate = climate
         self.terrain = terrain
         self.image = image
         self.id_movie = movie
+        self.id = id
 
     def to_dict(self):
         movie = Movie.query.get(self.id_movie)

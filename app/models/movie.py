@@ -12,12 +12,13 @@ class Movie(db.Model):
     # image =
     locations = db.relationship("Location",back_populates="movie")
 
-    def __init__(self, title, premiere, director, description, music, writer):
+    def __init__(self, title, premiere, director, description, music, writer, id=None):
         self.title = title
         self.premiere = premiere
         self.director = director
         self.description = description
         self.music = music
         self.writer = writer
+        self.id = id
         self.locations = []
         ##
