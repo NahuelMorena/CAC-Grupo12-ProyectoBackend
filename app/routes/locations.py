@@ -18,9 +18,10 @@ def new():
     name = request.form['name']
     climate = request.form['climate']
     terrain = request.form['terrain']
+    image = request.form['image']
     id_movie = request.form['id_movie']
 
-    location = Location(name,climate,terrain,id_movie)
+    location = Location(name,climate,terrain,image,id_movie)
 
     db.session.add(location)
     db.session.commit()
@@ -34,6 +35,7 @@ def update(id):
         location.name = request.form['name']
         location.climate = request.form['climate']
         location.terrain = request.form['terrain']
+        location.image = request.form['image']
         location.id_movie = request.form['id_movie']
 
         db.session.commit()

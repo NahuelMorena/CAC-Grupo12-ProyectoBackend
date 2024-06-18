@@ -2,7 +2,8 @@
 <form action="/location/update/{{location.id}}" method="post">
     <input type="text" name="name" placeholder="Ingrese un nombre" value="{{ location.name }}">
     <input type="text" name="climate" placeholder="Ingrese clima" value="{{ location.climate }}">
-    <input type="text" name="terrain" placeholder="Ingrese terreno" value="{{ location.terrain }}">    
+    <input type="text" name="terrain" placeholder="Ingrese terreno" value="{{ location.terrain }}"> 
+    <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa" value="{{ location.image }}">   
     <select name="id_movie" id="movie">
         {% for movie in movies %}
         <option value="{{movie.id}}"{% if movie.id == location.id_movie %}selected{% endif %}>

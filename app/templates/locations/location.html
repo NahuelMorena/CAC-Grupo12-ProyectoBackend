@@ -4,6 +4,7 @@
     <input type="text" name="name" placeholder="Ingrese un nombre">
     <input type="text" name="climate" placeholder="Ingrese clima">
     <input type="text" name="terrain" placeholder="Ingrese terreno">    
+    <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
     <select name="id_movie" id="movie">
         {% for movie in movies %}
         <option value="{{movie.id}}">{{movie.title}}</option>
