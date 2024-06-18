@@ -50,4 +50,4 @@ def delete(id):
     db.session.delete(location)
     db.session.commit()
 
-    return redirect(url_for(locations.index))
+    return redirect(url_for('locations.index'))

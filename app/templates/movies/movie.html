@@ -12,15 +12,33 @@
 
 <div>
     <h2>Listado de peliculas</h2>
-    <ul>
-        {% for movie in movies %}
-        <h3>{{ movie.title }}</h3>
-        <div>
-            <a href="{{ url_for('movies.update', id = movie.id) }}">Actualizar</a>
-            <a href="{{ url_for('movies.delete', id = movie.id) }}">Borrar</a>
-        </div>
-        <p>director: {{ movie.director }}</p>
-        <p>descripción: {{ movie.description }}</p>
-        {% endfor %}
-    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Año de estreno</th>
+                <th>director</th>
+                <th>Descripción</th>
+                <th>Equipo musical</th>
+                <th>Escritores</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.premiere }}</td>
+                <td>{{ movie.director }}</td>
+                <td>{{ movie.description }}</td>
+                <td>{{ movie.music }}</td>
+                <td>{{ movie.writer }}</td>
+                <td>
+                    <a href="{{ url_for('movies.update', id = movie.id) }}">Actualizar</a>
+                    <a href="{{ url_for('movies.delete', id = movie.id) }}">Borrar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>

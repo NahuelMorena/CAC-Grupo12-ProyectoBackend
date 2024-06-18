@@ -15,15 +15,29 @@
 
 <div>
     <h2>Listado de ubicaciones</h2>
-    <ul>
-        {% for location in locations %}
-        <h3>{{ location.name }}</h3>
-        <div>
-            <a href="{{ url_for('locations.update', id = location.id) }}">Actualizar</a>
-            <a href="{{ url_for('locations.delete', id = location.id) }}">Borrar</a>
-        </div>
-        <p>Clima: {{ location.climate }}</p>
-        <p>Terreno: {{ location.terrain }}</p>
-        {% endfor %}
-    </ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>Clima</th>
+                <th>Terreno</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location in locations %}
+            <tr>
+                <td>{{ location.name }}</td>
+                <td>{{ location.climate }}</td>
+                <td>{{ location.terrain }}</td>
+                <td><img src="{{ location.image }}" alt="Imagen de la ubicación" style="max-width: 100px; max-height: 100px;"></td>
+                <td>
+                    <a href="{{ url_for('locations.update', id = location.id) }}">Actualizar</a>
+                    <a href="{{ url_for('locations.delete', id = location.id) }}">Borrar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>

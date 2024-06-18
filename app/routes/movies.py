@@ -4,7 +4,7 @@ from app.utils.db import db
 
 movies = Blueprint('movies', __name__)
 
-path = '/movie'
+path = '/movies'
 
 @movies.route(path)
 def index():

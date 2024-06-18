@@ -4,7 +4,7 @@
     "name": "Ciudad del Hierro",
     "movie": "1",
     "climate": "Continental",
-    "terrain": "Montaña",
+    "terrain": "Montania",
     "image": "https://i.pinimg.com/originals/b6/51/a7/b651a7fbbdc2241cad7b2701558da064.jpg"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
     "id": "7",
-    "name": "La cabaña de troncos de Ursula",
+    "name": "La cabania de troncos de Ursula",
     "movie": "6",
     "climate": "Frio",
     "terrain": "Bosque",
@@ -57,7 +57,7 @@
     },
     {
     "id": "8",
-    "name": "La cabaña de Zeniba",
+    "name": "La cabania de Zeniba",
     "movie": "7",
     "climate": "Variado",
     "terrain": "Variado",
@@ -65,7 +65,7 @@
     },
     {
     "id": "9",
-    "name": "Bosque de Bambú",
+    "name": "Bosque de Bambu",
     "movie": "8",
     "climate": "Tropical",
     "terrain": "Bosque",
@@ -121,10 +121,10 @@
     },
     {
     "id": "16",
-    "name": "Baños Públicos",
+    "name": "Banios Publicos",
     "movie": "7",
     "climate": "Continental",
-    "terrain": "Río",
+    "terrain": "Rio",
     "image": "https://i.pinimg.com/1200x/03/45/fa/0345fa0fd7ac1e3716c520c874e4136b.jpg"
     },
     {
@@ -132,7 +132,7 @@
     "name": "Matsugo",
     "movie": "4",
     "climate": "Continental",
-    "terrain": "Río",
+    "terrain": "Rio",
     "image": "https://pm1.aminoapps.com/6892/5321f622326c6c941818e83b47e8d9fd1c4a874er1-736-932v2_hq.jpg"
     },
     {
@@ -140,7 +140,7 @@
     "name": "La casa de Taeko",
     "movie": "10",
     "climate": "Continental",
-    "terrain": "Río",
+    "terrain": "Rio",
     "image": "https://m.media-amazon.com/images/M/MV5BNzViN2RmNmUtNzc2NS00NDBiLWExOTQtNTMxZTYyY2QyNGMxXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg"
     },
     {
@@ -148,7 +148,7 @@
     "name": "Piccolo S.P.A.",
     "movie": "11",
     "climate": "Continental",
-    "terrain": "Río",
+    "terrain": "Rio",
     "image": "https://dulaccinemas.com/sites/default/files/styles/vignette_fiche_film/public/film/photos/2022/36-GN62G.jpg?itok=SvC8QX0w"
     },
     {
@@ -164,20 +164,20 @@
     "name": "La escuela de Satsuki",
     "movie": "4",
     "climate": "Templado",
-    "terrain": "Río",
+    "terrain": "Rio",
     "image": "https://cdn.dribbble.com/userupload/7379636/file/original-b4b8833a3eb96d97330faba3d3e3760f.jpeg?resize=1200x838"
     },
     {
     "id": "22",
     "name": "El puerto submarino de Fujimoto",
     "movie": "12",
-    "climate": "Húmedo",
+    "climate": "Humedo",
     "terrain": "Oceano",
     "image": "https://m.media-amazon.com/images/M/MV5BZTg1MjNmODQtNzNhZS00YTY3LTk5MGYtZDExMThjZDNlNGFjXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg"
     },
     {
     "id": "23",
-    "name": "Guardería Himawari",
+    "name": "Guarderia Himawari",
     "movie": "12",
     "climate": "Templado",
     "terrain": "Oceano",
@@ -193,7 +193,7 @@
     },
     {
     "id": "25",
-    "name": "Hogar para Niños San Morwald",
+    "name": "Hogar para Ninios San Morwald",
     "movie": "14",
     "climate": "Templado",
     "terrain": "Ciudad",
