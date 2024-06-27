@@ -1,0 +1,119 @@
+/*
+Estilos globales para todo el sitio webs.
+*/
+header{
+    background-color: #B8D5BA;
+}
+
+body {
+    background-color: #B8D5BA;
+}
+
+.image {
+    background-image: url(../img/Studio_Ghibli_logo.svg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 590px;
+}   
+
+.title {
+    font-size: medium;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transform: translateX(-50px);
+    max-width: 400px;
+}
+
+.containerSecundary {
+    display: flex;
+    background-color: #B8D5BA;
+}
+
+.description {
+    flex: 1;
+    padding: 10px;
+}
+
+.images {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.images img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.card {
+    padding: 20px; 
+    max-width: 400px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 1100px) { 
+    .title {
+        display: none;
+    }
+}    
+@media (max-width: 600px) {
+    .image {
+        background-image: url(../img/Studio_Ghibli_logo.svg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto; /* Asegura que ocupe todo el ancho y ajusta la altura automáticamente */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        height: 47vh; /* Ajusta la altura a un 80% del viewport height */
+}
+}
+
+
+
+
+@media screen and (max-width: 810px) { 
+    .title {
+        display: none;
+    }
+
+    body {
+        background-position: 50% 230%;
+    }
+
+    .containerSecundary {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    /* Estilos para la descripción y las imágenes */
+    .description, .images {
+        width: 100%;
+    }
+    /* Estilo opcional para el botón */
+    .btn {
+        margin-top: 10px; /* Espacio entre el texto y el botón */
+    }
+}    
+
+
+@media screen and (max-width: 600px) {
+    .images img {
+        width: calc(100% - 40px); /* Resta el doble del margen para que ocupe todo el ancho de la pantalla */
+        height: auto; /* Permite que la altura se ajuste automáticamente manteniendo la proporción */
+    }
+
+    body {
+        background-position: 50% 60%;
+        background-repeat:repeat;
+    }
+}

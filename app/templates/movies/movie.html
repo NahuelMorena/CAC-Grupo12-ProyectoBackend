@@ -1,44 +1,70 @@
-<h1>Pagina de peliculas</h1>
-<h2>Crear una pelicula</h2>
-<form action="/movie/new" method="post">
-    <input type="text" name="title" placeholder="Ingrese un nombre">
-    <input type="date" name="premiere" placeholder="Ingrese fecha de estreno">
-    <input type="text" name="director" placeholder="Ingrese director">    
-    <input type="text" name="description" placeholder="Ingrese una descripción">
-    <input type="text" name="music" placeholder="Ingrese musico">        
-    <input type="text" name="writer" placeholder="Ingrese escritor">    
-    <button>Guardar</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli webside</title>
+    <link rel="icon" href="img/icono.ico" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/nav-style.css">
+    <link rel="stylesheet" href="static/css/movie-style.css">
+</head>
+<body>
+    <!---navbar-->
+    <div id="navbarContainer"></div>
 
-<div>
-    <h2>Listado de peliculas</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Titulo</th>
-                <th>Año de estreno</th>
-                <th>director</th>
-                <th>Descripción</th>
-                <th>Equipo musical</th>
-                <th>Escritores</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for movie in movies %}
-            <tr>
-                <td>{{ movie.title }}</td>
-                <td>{{ movie.premiere }}</td>
-                <td>{{ movie.director }}</td>
-                <td>{{ movie.description }}</td>
-                <td>{{ movie.music }}</td>
-                <td>{{ movie.writer }}</td>
-                <td>
-                    <a href="{{ url_for('movies.update', id = movie.id) }}">Actualizar</a>
-                    <a href="{{ url_for('movies.delete', id = movie.id) }}">Borrar</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+    <h1>Pagina de peliculas</h1>
+    <h2>Crear una pelicula</h2>
+    <div id="div-form">
+        <section id="formContainer">
+            <form action="/movies/new" method="post">
+                <input type="text" name="title" placeholder="Ingrese un nombre">
+                <input type="date" name="premiere" placeholder="Ingrese fecha de estreno">
+                <input type="text" name="director" placeholder="Ingrese director">    
+                <input type="text" name="description" placeholder="Ingrese una descripción">
+                <input type="text" name="music" placeholder="Ingrese musico">        
+                <input type="text" name="writer" placeholder="Ingrese escritor">    
+                <div id="submitButton">
+                    <input class="btn" type="submit" value="Guardar">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div>
+        <h2>Listado de peliculas</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Año de estreno</th>
+                    <th>director</th>
+                    <th>Descripción</th>
+                    <th>Equipo musical</th>
+                    <th>Escritores</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for movie in movies %}
+                <tr>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.premiere }}</td>
+                    <td>{{ movie.director }}</td>
+                    <td>{{ movie.description }}</td>
+                    <td>{{ movie.music }}</td>
+                    <td>{{ movie.writer }}</td>
+                    <td>
+                        <a href="{{ url_for('movies.update', id = movie.id) }}" class="table-button update">Actualizar</a>
+                        <a href="{{ url_for('movies.delete', id = movie.id) }}" class="table-button delete">Borrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="static/js/navigation.js"></script>
+</body>
+</html>

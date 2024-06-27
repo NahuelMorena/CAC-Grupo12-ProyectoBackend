@@ -1,0 +1,63 @@
+/*
+Estilos globales para todo el sitio webs.
+*/
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    text-align: left;
+    color: #31241E;
+}
+
+body {
+    background-color: #f3ebeb;
+    margin-top: 80px;
+}
+
+.btn {
+    font-size: 16px; /* Tamaño de fuente mayor */
+    text-transform: uppercase; /* Letras en mayúscula */
+    border-radius: 20px; /* Bordeado circular */
+    padding: 10px 20px; /* Espacio interno del botón */
+    border: none; /* Elimina el borde */
+    background-color: #484a4b; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+}
+
+.btn:hover {
+    background-color: #909294; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+.btn:active {
+    background-color: #606263; /* Cambia el color de fondo cuando se hace clic en el botón */
+}
+
+.titulo-paginas{
+    font-family: 'Montserrat', sans-serif;
+    color: #31241E;
+    font-style: italic;
+    text-align: center;
+}
+.imagen-titulo{
+    max-width: 70%;
+    padding: 0px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+}
+@media (max-width: 600px) {
+    .imagen-titulo{
+        max-width: 100%;
+    }
+}
+/*
+.encabezado{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #b8d5ba;
+    padding: 0;
+} Estilo del encabezado de la pagina
+*/
+

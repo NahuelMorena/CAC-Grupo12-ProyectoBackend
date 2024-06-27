@@ -1,0 +1,125 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 ;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #b8d5ba;
+    z-index: 1000;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    margin: 0;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    left: 50%;
+}
+
+.nav-menu-item {
+    margin-right: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu-link:hover, .nav-menu-link:active {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: 0.5s;
+    font-size: 1.2em;
+}
+
+.active {
+    font-size: 18px;
+    color: #c49515;
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 970px) {
+
+    .nav-menu {
+        display: none; 
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid rgb(121, 119, 119);
+        background-color: #9fc0a2;
+        left: 90%;
+        top: 5px;
+    }
+
+    .hamburger-menu:hover {
+        background-color: #8aa78c;
+    }
+
+    .hamburger-menu:active {
+        background-color: #788a79;
+    }
+
+    .nav-menu.show {
+        display: block;
+        position: fixed; /* Fijar la posición en la ventana del navegador */
+        top: 25%; /* Centrar verticalmente */
+        left: 80%; /* Centrar horizontalmente */
+        transform: translate(-50%, -50%); /* Centrar respecto al centro */
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+        z-index: 999; 
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-right: 0;
+    }
+
+    .nav-menu-item {
+        margin:10px 0;
+    }
+}

@@ -1,43 +1,68 @@
-<h1>Pagina de ubicaciones</h1>
-<h2>Crear una ubicacion</h2>
-<form action="/location/new" method="post">
-    <input type="text" name="name" placeholder="Ingrese un nombre">
-    <input type="text" name="climate" placeholder="Ingrese clima">
-    <input type="text" name="terrain" placeholder="Ingrese terreno">    
-    <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
-    <select name="id_movie" id="movie">
-        {% for movie in movies %}
-        <option value="{{movie.id}}">{{movie.title}}</option>
-        {% endfor %}
-    </select>
-    <button>Guardar</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli webside</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/nav-style.css">
+    <link rel="stylesheet" href="static/css/location-style.css">
+</head>
+<body>
+    <!---navbar-->
+    <div id="navbarContainer"></div>
 
-<div>
-    <h2>Listado de ubicaciones</h2>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>nombre</th>
-                <th>Clima</th>
-                <th>Terreno</th>
-                <th>Imagen</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for location in locations %}
-            <tr>
-                <td>{{ location.name }}</td>
-                <td>{{ location.climate }}</td>
-                <td>{{ location.terrain }}</td>
-                <td><img src="{{ location.image }}" alt="Imagen de la ubicación" style="max-width: 100px; max-height: 100px;"></td>
-                <td>
-                    <a href="{{ url_for('locations.update', id = location.id) }}">Actualizar</a>
-                    <a href="{{ url_for('locations.delete', id = location.id) }}">Borrar</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
+    <h1>Pagina de ubicaciones</h1>
+    <h2>Crear una ubicacion</h2>
+    <div id="div-form">
+        <section id="formContainer">
+            <form action="/location/new" method="post">
+                <input type="text" name="name" placeholder="Ingrese un nombre">
+                <input type="text" name="climate" placeholder="Ingrese clima">
+                <input type="text" name="terrain" placeholder="Ingrese terreno">    
+                <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
+                <select name="id_movie" id="movie">
+                    {% for movie in movies %}
+                    <option value="{{movie.id}}">{{movie.title}}</option>
+                    {% endfor %}
+                </select>
+                <div id="submitButton">
+                    <input class="btn" type="submit" value="Guardar">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <div>
+        <h2>Listado de ubicaciones</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>nombre</th>
+                    <th>Clima</th>
+                    <th>Terreno</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for location in locations %}
+                <tr>
+                    <td>{{ location.name }}</td>
+                    <td>{{ location.climate }}</td>
+                    <td>{{ location.terrain }}</td>
+                    <td><img src="{{ location.image }}" alt="Imagen de la ubicación"></td>
+                    <td>
+                        <a href="{{ url_for('locations.update', id = location.id) }}" class="table-button update">Actualizar</a>
+                        <a href="{{ url_for('locations.delete', id = location.id) }}" class="table-button delete">Borrar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="static/js/navigation.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, jsonify
 from app.models.movie import Movie
 from app.utils.db import db
 
@@ -50,6 +50,13 @@ def update(id):
 def delete(id):
     print(f"delete {id}")
     movie = Movie.query.get(id)
+
+    if not movie:
+        return jsonify({'error': 'Movie not found'}), 404
+    
+    if movie.locations:
+        return jsonify({'error': 'No se puede borrar esta pelicula por que cuentas con localidades en el sistema'}), 400
+
     db.session.delete(movie)
     db.session.commit()
 
