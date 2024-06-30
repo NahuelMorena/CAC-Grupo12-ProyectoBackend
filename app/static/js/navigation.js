@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //currentPage = '/'+currentPage;
 
     // Fetch the navbar content
-    fetch("static/navbar.html")
+    fetch("../../../static/navbar.html")
         .then(response => response.text())
         .then(html => {
 

@@ -39,7 +39,8 @@ def update(id):
     if request.method == 'POST':
         if not validate_movie_form(request.form):
             flash("Error! Todos los campos deben estar completos.", "error")
-            return redirect(url_for('movies.index'))
+            return render_template('movies/update.html', movie = movie)
+            #return redirect(url_for('movies.index'))
         
         movie.title = request.form['title']
         movie.premiere = request.form['premiere']

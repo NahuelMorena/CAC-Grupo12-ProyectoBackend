@@ -1,15 +1,50 @@
-<h2>Actualizar una ubicación</h2>
-<form action="/location/update/{{location.id}}" method="post">
-    <input type="text" name="name" placeholder="Ingrese un nombre" value="{{ location.name }}">
-    <input type="text" name="climate" placeholder="Ingrese clima" value="{{ location.climate }}">
-    <input type="text" name="terrain" placeholder="Ingrese terreno" value="{{ location.terrain }}"> 
-    <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa" value="{{ location.image }}">   
-    <select name="id_movie" id="movie">
-        {% for movie in movies %}
-        <option value="{{movie.id}}"{% if movie.id == location.id_movie %}selected{% endif %}>
-            {{movie.title}}
-        </option>
-        {% endfor %}
-    </select>
-    <button>Guardar</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli webside</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="../../../static/css/style.css">
+    <link rel="stylesheet" href="../../../static/css/nav-style.css">
+    <link rel="stylesheet" href="../../../static/css/location-style.css">
+</head>
+<body>
+    <!--navbar-->
+    <div id="navbarContainer"></div>
+    <h2>Actualizar ubicación</h2>
+
+    <div id="div-form">
+        <section id="formContainer">
+            <form action="/location/update/{{location.id}}" method="post">
+                <input type="text" name="name" placeholder="Ingrese un nombre" value="{{ location.name }}">
+                <input type="text" name="climate" placeholder="Ingrese clima" value="{{ location.climate }}">
+                <input type="text" name="terrain" placeholder="Ingrese terreno" value="{{ location.terrain }}"> 
+                <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa" value="{{ location.image }}">   
+                <select name="id_movie" id="movie">
+                    {% for movie in movies %}
+                    <option value="{{movie.id}}"{% if movie.id == location.id_movie %}selected{% endif %}>
+                        {{movie.title}}
+                    </option>
+                    {% endfor %}
+                </select>
+                <div id="submitButton">
+                    <input class="btn" type="submit" value="Guardar">
+                </div>
+            </form>
+        </section>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <script src="../../../static/js/navigation.js"></script>
+</body>

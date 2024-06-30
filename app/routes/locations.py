@@ -40,7 +40,9 @@ def update(id):
     if request.method == 'POST':
         if not validate_movie_form(request.form):
             flash("Error! Todos los campos deben estar completos.", "error")
-            return redirect(url_for('locations.index'))
+            #return redirect(url_for('locations.index'))
+            movies = Movie.query.all()
+            return render_template('locations/update.html', location = location, movies = movies)
         
         location.name = request.form['name']
         location.climate = request.form['climate']
