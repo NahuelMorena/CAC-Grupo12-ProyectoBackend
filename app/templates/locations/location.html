@@ -34,7 +34,17 @@
             </form>
         </section>
     </div>
-
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
     <div>
         <h2>Listado de ubicaciones</h2>
         <table border="1">
