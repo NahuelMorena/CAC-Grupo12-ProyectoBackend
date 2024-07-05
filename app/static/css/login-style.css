@@ -69,6 +69,7 @@ body {
     background-repeat: no-repeat; /* Evita la repetición de la imagen */
     background-position: center; /* Centra la imagen en el fondo */
     font-family: 'Poppins', sans-serif; /* Estilo de fuente alternativo */
+    background-color: #B8D5BA;
 }
 
 #links {

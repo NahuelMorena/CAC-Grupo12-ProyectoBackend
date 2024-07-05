@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de Login</title>
+    <title>Pantalla de registro</title>
     <link rel="icon" href="static/img/icono.ico" type="image/png">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -16,18 +16,26 @@
     </div>
     <div id="div-form">
         <section id="formContainer">
-            <form action="/login" method="post">
+            <form action="/register" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <div>
                     <label for="txtName">Nombre de usuario</label>
                     <input type="text" name="username" placeholder="Ingrese un nombre de usuario">   
                 </div>
                 <div>
+                    <label for="txtEmail">Email</label>
+                    <input type="text" name="email" placeholder="Ingrese un email">   
+                </div>
+                <div>
                     <label for="txtPassword">Contraseña</label>     
                     <input type="password" name="password" placeholder="Ingrese una contraseña">    
                 </div>
+                <div>
+                    <label for="txtPassword">Repita la contraseña</label>     
+                    <input type="password" name="password2" placeholder="Repita la contraseña contraseña">    
+                </div>
                 <div id="submitButton">
-                    <input class="btn" type="submit" value="Iniciar sesión">
+                    <input class="btn" type="submit" value="Registrar usuario">
                 </div>
             </form>
         </section>
@@ -43,7 +51,7 @@
         {% endif %}
         {% endwith %}
         <div id="links">
-            <a href="/register">Registrarse</a>
+            <a href="/login">Iniciar sesión</a>
             <a href="https://cac-grupo12-studioghibli.netlify.app">Visita nuestra página</a>
         </div>
     </div>
