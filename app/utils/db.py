@@ -7,15 +7,35 @@ def load_data():
     #Borra toda la info de la base de datos
     delete_actual_data()
     #Cargo automaticamente datos a la base de datos
+    load_users()
     load_movies()
     load_locations()
 
 def delete_actual_data():
     from app.models.movie import Movie
     from app.models.location import Location
+    from app.models.user import User
     db.session.query(Location).delete()
     db.session.query(Movie).delete()
+    db.session.query(User).delete()
     db.session.commit()
+
+def load_users():
+    from app.models.user import User
+    with open('app/static/users.json', 'r') as f:
+        data = json.load(f)
+
+        for item in data:
+            user = User(
+                id = item['id'],
+                username = item['username'],
+                email = item['email'],
+                actived = item['actived'],
+                password = item['password']
+            )
+            db.session.add(user)
+        db.session.commit()
+        print("Usuarios cargados a la base de datos satisfactoriamente!!")
 
 def load_movies():
     from app.models.movie import Movie

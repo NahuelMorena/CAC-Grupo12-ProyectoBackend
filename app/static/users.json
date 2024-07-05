@@ -1,0 +1,9 @@
+[
+    {
+    "id": "1",
+    "username": "admin",
+    "password": "scrypt:32768:8:1$Paksme55Tn3ycR40$c54e62356071f35be2f05bf0465300647407f6535b64161ef9bc9648e1d18bf3c274af4a566088028898fc29d234b8894e3a0b9eeae5014d70d0a63cd46829bc",
+    "email": "admin@admin.com",
+    "actived": true
+    }
+]

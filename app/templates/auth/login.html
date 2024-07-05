@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Login</title>
+    <link rel="icon" href="static/img/icono.ico" type="image/png">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/login-style.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="static/img/icons8-totoro-480.png" alt="Imagen logo" class="logo-img">
+    </div>
+    <div id="div-form">
+        <section id="formContainer">
+            <form action="/login" method="post">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <div>
+                    <label for="txtName">Nombre de usuario</label>
+                    <input type="text" name="username" placeholder="Ingrese un nombre de usuario">   
+                </div>
+                <div>
+                    <label for="txtPassword">Contraseña</label>     
+                    <input type="password" name="password" placeholder="Ingrese una contraseña">    
+                </div>
+                <div id="submitButton">
+                    <input class="btn" type="submit" value="Iniciar sesión">
+                </div>
+            </form>
+        </section>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    <div class="alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <div id="links">
+            <a href="/registro">Registrarse</a>
+            <a href="https://cac-grupo12-studioghibli.netlify.app">Visita nuestra página</a>
+        </div>
+    </div>
+</body>
+</html>
