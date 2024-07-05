@@ -15,7 +15,7 @@ def index():
 
 @locations.route(path+'/new', methods=['POST'])
 def new():
-    if not validate_movie_form(request.form):
+    if not validate_location_form(request.form):
         flash("Error! Todos los campos deben estar completos.", "error")
         return redirect(url_for('locations.index'))
     
@@ -38,7 +38,7 @@ def new():
 def update(id):
     location = Location.query.get(id)
     if request.method == 'POST':
-        if not validate_movie_form(request.form):
+        if not validate_location_form(request.form):
             flash("Error! Todos los campos deben estar completos.", "error")
             #return redirect(url_for('locations.index'))
             movies = Movie.query.all()
@@ -69,7 +69,7 @@ def delete(id):
 
     return redirect(url_for('locations.index'))
 
-def validate_movie_form(form):
+def validate_location_form(form):
     required_fields = ['name', 'climate', 'terrain', 'image', 'id_movie']
     for field in required_fields:
         if not form.get(field):

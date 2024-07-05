@@ -3,6 +3,7 @@ from flask_login import LoginManager
 from app.models.user import User
 from .routes.locations import locations
 from .routes.movies import movies
+from .routes.users import users
 from .routes.index import home, status_401, status_404
 from .routes.api.locations import api_locations
 from flask_wtf.csrf import CSRFProtect
@@ -27,6 +28,7 @@ def create_app():
     app.register_blueprint(home)
     app.register_blueprint(locations)
     app.register_blueprint(movies)
+    app.register_blueprint(users)
     app.register_error_handler(401, status_401)
     app.register_error_handler(404, status_404)
 

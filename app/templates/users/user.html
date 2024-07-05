@@ -9,27 +9,22 @@
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/nav-style.css">
     <link rel="stylesheet" href="static/css/form-style.css">
-    <link rel="stylesheet" href="static/css/location-style.css">
+    <link rel="stylesheet" href="static/css/user-style.css">
 </head>
 <body>
     <!---navbar-->
     <div id="navbarContainer"></div>
 
-    <h1>Pagina de ubicaciones</h1>
-    <h2>Crear una ubicacion</h2>
+    <h1>Pagina de Usuario</h1>
+    <h2>Dar de alta un usuario</h2>
     <div id="div-form">
         <section id="formContainer">
-            <form action="/location/new" method="post">
+            <form action="/users/new" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="name" placeholder="Ingrese un nombre">
-                <input type="text" name="climate" placeholder="Ingrese clima">
-                <input type="text" name="terrain" placeholder="Ingrese terreno">    
-                <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
-                <select name="id_movie" id="movie">
-                    {% for movie in movies %}
-                    <option value="{{movie.id}}">{{movie.title}}</option>
-                    {% endfor %}
-                </select>
+                <input type="text" name="username" placeholder="Ingrese un nombre de usuario">
+                <input type="text" name="email" placeholder="Ingrese un email">
+                <input type="password" name="password" placeholder="Ingrese una contraseña">    
+                <input type="password" name="password2" placeholder="Repita la contraseña"> 
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>
@@ -48,27 +43,30 @@
         {% endif %}
     {% endwith %}
     <div>
-        <h2>Listado de ubicaciones</h2>
+        <h2>Listado de usuarios</h2>
         <table border="1">
             <thead>
                 <tr>
-                    <th>nombre</th>
-                    <th>Clima</th>
-                    <th>Terreno</th>
-                    <th>Imagen</th>
+                    <th>Nombre de usuario</th>
+                    <th>Email</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
-                {% for location in locations %}
+                {% for user in users %}
                 <tr>
-                    <td>{{ location.name }}</td>
-                    <td>{{ location.climate }}</td>
-                    <td>{{ location.terrain }}</td>
-                    <td><img src="{{ location.image }}" alt="Imagen de la ubicación"></td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ "activo" if user.actived else "inactivo" }}</td>
                     <td>
-                        <a href="{{ url_for('locations.update', id = location.id) }}" class="table-button update">Actualizar</a>
-                        <a href="{{ url_for('locations.delete', id = location.id) }}" class="table-button delete">Borrar</a>
+                        {% if not user.actived %}
+                            <a href="{{ url_for('users.activate', id = user.id)}}" class="table-button actived">Habilitar</a>
+                        {% endif %}
+                        <a href="{{ url_for('users.update', id = user.id) }}" class="table-button update">Actualizar</a>
+                        {% if user.id != current_user.id %}
+                            <a href="{{ url_for('users.delete', id = user.id) }}" class="table-button delete">Borrar</a>
+                        {% endif %}
                     </td>
                 </tr>
                 {% endfor %}

@@ -9,23 +9,21 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="../../../static/css/style.css">
     <link rel="stylesheet" href="../../../static/css/nav-style.css">
-    <link rel="stylesheet" href="../../../static/css/movie-style.css">
+    <link rel="stylesheet" href="../../../static/css/user-style.css">
     <link rel="stylesheet" href="../../../static/css/form-style.css">
 </head>
 <body>
     <!--navbar-->
     <div id="navbarContainer"></div>
-    <h2>Actualizar pelicula</h2>
+    <h2>Actualizar usuario</h2>
     <div id="div-form">
         <section id="formContainer">
-            <form action="/movies/update/{{movie.id}}" method="post">
+            <form action="/users/update/{{user.id}}" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="title" placeholder="Ingrese un nombre" value="{{ movie.title }}">
-                <input type="date" name="premiere" placeholder="Ingrese fecha de estreno", value="{{ movie.premiere }}">
-                <input type="text" name="director" placeholder="Ingrese director" value="{{ movie.director }}">    
-                <input type="text" name="description" placeholder="Ingrese una descripción" value="{{ movie.description }}">
-                <input type="text" name="music" placeholder="Ingrese musico" value="{{ movie.music }}">        
-                <input type="text" name="writer" placeholder="Ingrese escritor" value="{{ movie.writer }}">    
+                <input type="text" name="username" placeholder="Ingrese un nombre de usuario" value="{{ user.username }}">
+                <input type="text" name="email" placeholder="Ingrese un email" value="{{ user.email}}">
+                <input type="password" name="password" placeholder="Ingrese una contraseña">    
+                <input type="password" name="password2" placeholder="Repita la contraseña"> 
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>

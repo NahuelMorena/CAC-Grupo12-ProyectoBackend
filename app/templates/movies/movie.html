@@ -20,6 +20,7 @@
     <div id="div-form">
         <section id="formContainer">
             <form action="/movies/new" method="post">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <input type="text" name="title" placeholder="Ingrese un nombre">
                 <input type="date" name="premiere" placeholder="Ingrese fecha de estreno">
                 <input type="text" name="director" placeholder="Ingrese director">    

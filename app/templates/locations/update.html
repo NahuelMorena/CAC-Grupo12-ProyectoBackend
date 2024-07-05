@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../../static/css/style.css">
     <link rel="stylesheet" href="../../../static/css/nav-style.css">
     <link rel="stylesheet" href="../../../static/css/location-style.css">
+    <link rel="stylesheet" href="../../../static/css/form-style.css">
 </head>
 <body>
     <!--navbar-->
@@ -18,6 +19,7 @@
     <div id="div-form">
         <section id="formContainer">
             <form action="/location/update/{{location.id}}" method="post">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                 <input type="text" name="name" placeholder="Ingrese un nombre" value="{{ location.name }}">
                 <input type="text" name="climate" placeholder="Ingrese clima" value="{{ location.climate }}">
                 <input type="text" name="terrain" placeholder="Ingrese terreno" value="{{ location.terrain }}"> 
