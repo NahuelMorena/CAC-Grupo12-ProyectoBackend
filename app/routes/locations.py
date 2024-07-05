@@ -2,18 +2,21 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from app.models.location import Location
 from app.models.movie import Movie
 from app.utils.db import db
+from flask_login import login_required
 
 locations = Blueprint('locations', __name__)
 
 path = '/location'
 
 @locations.route(path)
+@login_required
 def index():
     locations = Location.query.all()
     movies = Movie.query.all()
     return render_template('locations/location.html', locations = locations, movies = movies)
 
 @locations.route(path+'/new', methods=['POST'])
+@login_required
 def new():
     if not validate_location_form(request.form):
         flash("Error! Todos los campos deben estar completos.", "error")
@@ -35,6 +38,7 @@ def new():
     return redirect(url_for('locations.index'))
 
 @locations.route(path+'/update/<id>', methods=['POST', 'GET'])
+@login_required
 def update(id):
     location = Location.query.get(id)
     if request.method == 'POST':
@@ -60,6 +64,7 @@ def update(id):
         return render_template('locations/update.html', location = location, movies = movies)
 
 @locations.route(path+'/delete/<id>')
+@login_required
 def delete(id):
     location = Location.query.get(id)
     db.session.delete(location)

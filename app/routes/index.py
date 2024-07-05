@@ -9,6 +9,7 @@ home = Blueprint('home', __name__)
 path = '/'
 
 @home.route(path)
+@login_required
 def index():
     return render_template('index.html')
 
@@ -60,14 +61,10 @@ def login():
     return render_template('auth/login.html')
 
 @home.route(path+"/logout")
+@login_required
 def logout():
     logout_user()
     return redirect(url_for('home.login'))
-
-@home.route(path+"/protected")
-@login_required
-def protected():
-    return "<h1>Pantalla proteguida</h1>"
 
 def status_401(error):
     return redirect(url_for('home.login'))

@@ -2,16 +2,19 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash
 from app.models.user import User
 from werkzeug.security import generate_password_hash
 from app.utils.db import db
+from flask_login import login_required
 
 users = Blueprint('users', __name__)
 path = "/users"
 
 @users.route(path)
+@login_required
 def index():
     users = User.query.all()
     return render_template('users/user.html', users = users)
 
 @users.route(path+"/new", methods=['POST'])
+@login_required
 def new():
     if not validate_user_form(request.form):
         flash("Error! Todos los campos deben estar completos.", "error")
@@ -36,6 +39,7 @@ def new():
     return redirect(url_for('users.index'))
 
 @users.route(path+"/update/<id>", methods=['POST', 'GET'])
+@login_required
 def update(id):
     user = User.query.get(id)
     if request.method == 'POST':
@@ -61,6 +65,7 @@ def update(id):
     return render_template('users/update.html', user = user)
 
 @users.route(path+"/delete/<id>")
+@login_required
 def delete(id):
     user = User.query.get(id)
     db.session.delete(user)
@@ -71,6 +76,7 @@ def delete(id):
     return redirect(url_for('users.index'))
 
 @users.route(path+"/activate/<id>")
+@login_required
 def activate(id):
     user = User.query.get(id)
     user.actived = True

@@ -1,17 +1,20 @@
 from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
 from app.models.movie import Movie
 from app.utils.db import db
+from flask_login import login_required
 
 movies = Blueprint('movies', __name__)
 
 path = '/movies'
 
 @movies.route(path)
+@login_required
 def index():
     movies = Movie.query.all()
     return render_template('movies/movie.html', movies=movies)
 
 @movies.route(path +'/new', methods=['POST'])
+@login_required
 def new():
     if not validate_movie_form(request.form):
         flash("Error! Todos los campos deben estar completos.", "error")
@@ -34,6 +37,7 @@ def new():
     return redirect(url_for('movies.index'))
 
 @movies.route(path+'/update/<id>', methods=['POST', 'GET'])
+@login_required
 def update(id):
     movie = Movie.query.get(id)
     if request.method == 'POST':
@@ -58,6 +62,7 @@ def update(id):
     return render_template('movies/update.html', movie = movie)
 
 @movies.route(path+'/delete/<id>')
+@login_required
 def delete(id):
     print(f"delete {id}")
     movie = Movie.query.get(id)
