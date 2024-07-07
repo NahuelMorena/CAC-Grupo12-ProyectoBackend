@@ -21,12 +21,34 @@
         <section id="formContainer">
             <form action="/movies/new" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="title" placeholder="Ingrese un nombre">
-                <input type="date" name="premiere" placeholder="Ingrese fecha de estreno">
-                <input type="text" name="director" placeholder="Ingrese director">    
-                <input type="text" name="description" placeholder="Ingrese una descripción">
-                <input type="text" name="music" placeholder="Ingrese musico">        
-                <input type="text" name="writer" placeholder="Ingrese escritor">    
+                <div>
+                    <label for="txtTitle">Titulo</label>
+                    <input type="text" name="title" placeholder="Ingrese un titulo">
+                </div>
+                <div>
+                    <label for="txtPremiere">Fecha de estreno</label>
+                    <input type="date" name="premiere" placeholder="Ingrese fecha de estreno">
+                </div>
+                <div>
+                    <label for="txtDirector">Director</label>
+                    <input type="text" name="director" placeholder="Ingrese director"> 
+                </div>   
+                <div>
+                    <label for="txtImage">Link de imagen</label>
+                    <input type="text" name="image" placeholder="Ingrese una link a imagen representativa">
+                </div>
+                <div>
+                    <label for="txtMusic">Equipo musical</label>
+                    <input type="text" name="music" placeholder="Ingrese musico">     
+                </div>     
+                <div>
+                    <label for="txtWriter">Escritor</label>
+                    <input type="text" name="writer" placeholder="Ingrese escritor">  
+                </div>  
+                <div>
+                    <label for="txtDescription">descripción</label>
+                    <textarea name="description" placeholder="Ingrese una descripción"></textarea>
+                </div>
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>
@@ -52,9 +74,8 @@
                     <th>Titulo</th>
                     <th>Año de estreno</th>
                     <th>director</th>
-                    <th>Descripción</th>
                     <th>Equipo musical</th>
-                    <th>Escritores</th>
+                    <th>Imagen</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -64,9 +85,8 @@
                     <td>{{ movie.title }}</td>
                     <td>{{ movie.premiere }}</td>
                     <td>{{ movie.director }}</td>
-                    <td>{{ movie.description }}</td>
                     <td>{{ movie.music }}</td>
-                    <td>{{ movie.writer }}</td>
+                    <td><img src="{{ movie.image }}" alt="Imagen de la pelicula"></td>
                     <td>
                         <a href="{{ url_for('movies.update', id = movie.id) }}" class="table-button update">Actualizar</a>
                         <a href="{{ url_for('movies.delete', id = movie.id) }}" class="table-button delete">Borrar</a>

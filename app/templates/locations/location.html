@@ -8,8 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/nav-style.css">
-    <link rel="stylesheet" href="static/css/form-style.css">
-    <link rel="stylesheet" href="static/css/location-style.css">
+    <link rel="stylesheet" href="static/css/movie-style.css">
 </head>
 <body>
     <!---navbar-->
@@ -21,15 +20,30 @@
         <section id="formContainer">
             <form action="/location/new" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="name" placeholder="Ingrese un nombre">
-                <input type="text" name="climate" placeholder="Ingrese clima">
-                <input type="text" name="terrain" placeholder="Ingrese terreno">    
-                <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
-                <select name="id_movie" id="movie">
-                    {% for movie in movies %}
-                    <option value="{{movie.id}}">{{movie.title}}</option>
-                    {% endfor %}
-                </select>
+                <div>
+                    <label for="txtName">Nombre</label>
+                    <input type="text" name="name" placeholder="Ingrese un nombre">
+                </div>
+                <div>
+                    <label for="txtClimate">Clima</label>
+                    <input type="text" name="climate" placeholder="Ingrese clima">
+                </div>
+                <div>
+                    <label for="txtTerrain">Terreno</label>
+                    <input type="text" name="terrain" placeholder="Ingrese terreno"> 
+                </div>  
+                <div>
+                    <label for="txtImage">Link de imagen</label>
+                    <input type="text" name="image" placeholder="Ingrese link hacia imagen representativa"> 
+                </div> 
+                <div>
+                    <label for="txtMovie">Pelicula asociada</label>
+                    <select name="id_movie" id="movie">
+                        {% for movie in movies %}
+                        <option value="{{movie.id}}">{{movie.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>

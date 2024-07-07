@@ -3,6 +3,7 @@ from flask_login import login_user, logout_user, login_required
 from app.models.user import User
 from werkzeug.security import generate_password_hash
 from app.utils.db import db
+from app.utils.validator import validate_form
 
 home = Blueprint('home', __name__)
 
@@ -16,21 +17,16 @@ def index():
 @home.route(path+"/register", methods=['POST', 'GET'])
 def register():
     if request.method == 'POST':
-        if not validate_user2_form(request.form):
+        required_fields = ['username', 'email', 'password', 'password2']
+        if not validate_form(request.form, required_fields):
             flash("Error! Todos los campos deben estar completos.", "error")
             return redirect(url_for('home.register'))
-        
-        password = request.form['password']
-        password2 = request.form['password2']
 
-        if password != password2:
+        if request.form['password'] != request.form['password2']:
             flash("Error! Las contraseñas ingresadas no coinciden", "error")
             return redirect(url_for('home.register'))
-        
-        username = request.form['username']
-        email = request.form['email']
 
-        user = User(username, email, generate_password_hash(password), False)
+        user = User(request.form['username'], request.form['email'], generate_password_hash(request.form['password']), False)
         db.session.add(user)
         db.session.commit()
 
@@ -43,18 +39,15 @@ def register():
 @home.route(path+"/login", methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
-        #print(request.form['username'])
-        #print(request.form['password'])
-        #return None
-        if not validate_user_form(request.form):
+        required_fields = ['username', 'password']
+        if not validate_form(request.form, required_fields):
             flash("Error! Todos los campos deben estar completos.", "error")
             return redirect(url_for('home.login'))
         
         user = User.query.filter_by(username=request.form['username']).first()
-        if user:
-            if User.check_password(user.password,request.form['password']):
-                login_user(user)
-                return render_template('index.html')
+        if user and User.check_password(user.password,request.form['password']):
+            login_user(user)
+            return render_template('index.html')
         
         flash("Error! Los datos ingresados no son validos", "error")
 
@@ -71,17 +64,3 @@ def status_401(error):
 
 def status_404(error):
     return "<h1>La ruta ingresada no existe<h1>", 404
-
-def validate_user_form(form):
-    required_fields = ['username', 'password']
-    for field in required_fields:
-        if not form.get(field):
-            return False
-    return True
-
-def validate_user2_form(form):
-    required_fields = ['username', 'email', 'password', 'password2']
-    for field in required_fields:
-        if not form.get(field):
-            return False
-    return True

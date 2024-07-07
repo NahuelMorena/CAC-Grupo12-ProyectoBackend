@@ -20,12 +20,34 @@
         <section id="formContainer">
             <form action="/movies/update/{{movie.id}}" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="title" placeholder="Ingrese un nombre" value="{{ movie.title }}">
-                <input type="date" name="premiere" placeholder="Ingrese fecha de estreno", value="{{ movie.premiere }}">
-                <input type="text" name="director" placeholder="Ingrese director" value="{{ movie.director }}">    
-                <input type="text" name="description" placeholder="Ingrese una descripción" value="{{ movie.description }}">
-                <input type="text" name="music" placeholder="Ingrese musico" value="{{ movie.music }}">        
-                <input type="text" name="writer" placeholder="Ingrese escritor" value="{{ movie.writer }}">    
+                <div>
+                    <label for="txtTitle">Titulo</label>
+                    <input type="text" name="title" placeholder="Ingrese un titulo" value="{{ movie.title }}">
+                </div>
+                <div>
+                    <label for="txtPremiere">Fecha de estreno</label>
+                    <input type="date" name="premiere" placeholder="Ingrese fecha de estreno" value="{{ movie.premiere }}">
+                </div>
+                <div>
+                    <label for="txtDirector">Director</label>
+                    <input type="text" name="director" placeholder="Ingrese director" value="{{ movie.director }}"> 
+                </div>   
+                <div>
+                    <label for="txtImage">Link de imagen</label>
+                    <input type="text" name="image" placeholder="Ingrese una link a imagen representativa" value="{{ movie.image }}">
+                </div>
+                <div>
+                    <label for="txtMusic">Equipo musical</label>
+                    <input type="text" name="music" placeholder="Ingrese musico" value="{{ movie.music }}">     
+                </div>     
+                <div>
+                    <label for="txtWriter">Escritor</label>
+                    <input type="text" name="writer" placeholder="Ingrese escritor" value="{{ movie.writer }}">  
+                </div>  
+                <div>
+                    <label for="txtDescription">descripción</label>
+                    <textarea name="description" placeholder="Ingrese una descripción">{{ movie.description }}</textarea>
+                </div>
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>

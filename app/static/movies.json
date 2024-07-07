@@ -3,135 +3,150 @@
     "id": "1",
     "title": "La princesa mononoke",
     "premiere": "1997-07-12",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hayao Miyazaki",
+    "description": "Ambientada en un Japón del período Muromachi, se centra en la lucha entre los guardianes sobrenaturales de un bosque y los humanos que profanan sus recursos, visto por el forastero Ashitaka. En realidad, Mononoke no es un nombre, sino una descripción que puede ser traducida en este contexto como «espíritu vengador»; por lo que el título de la película literalmente podría traducirse como La princesa de los espíritus vengadores.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://es.web.img3.acsta.net/pictures/22/05/09/12/02/0498795.jpg"
     },
     {
     "id": "2",
     "title": "El regreso del gato",
     "premiere": "2002-07-20",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hiroyuki Morita",
+    "description": "Haru es una estudiante de instituto tímida y poco habladora, no posee demasiada fuerza de voluntad ni confianza en sí misma, aunque está enamorada de un joven de su instituto, pero para su desgracia descubre que éste tiene novia, lo que a sus ojos le confirma que es una persona sin suerte. Un día salva a un gato, de pelaje oscuro y ojos heterocromáticos, de ser atropellado por un camión. El gato, para asombro de Haru, se presenta como Lune, príncipe del reino de los gatos. Haru esa noche insinúa a su madre este incidente y ella le comenta que siendo pequeña Haru sostenía poseer la habilidad, ahora olvidada, de hablar con los gatos y cómo una vez la encontró conversando y alimentando a una gata abandonada.",
+    "music": "Yuji Nomi",
+    "writer": "Hayao Miyazaki, Reiko Yoshida",
+    "image": "https://i.pinimg.com/originals/c5/1c/28/c51c2894bcd5cd10b6c03ff11dc36a6a.jpg"
     },
     {
     "id": "3",
     "title": "El recuerdo de Marnie",
     "premiere": "2014-07-19",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hiromasa Yonebayashi",
+    "description": "Anna Sasaki es una niña solitaria y sin amigos que vive con una familia de acogida. A causa del asma que sufre y de su bajo estado de ánimo, sus padres adoptivos deciden enviarla a Hokkaidō para quedarse con unos familiares lejanos, el matrimonio Oiwa, donde recorre las dunas cerca del mar. En el pantano encuentra una vieja mansión, la cual a Anna le resulta extrañamente familiar. En la casa se encuentra con una niña enigmática llamada Marnie, quien se convierte en la primera amiga de Anna. Después de haber entablado amistad con Marnie, Anna se vuelve más sociable, haciendo que pronto la familia y otras personas del pueblo se vuelvan amigos de la pequeña. Poco a poco, Anna empieza a descubrir cosas sobre Marnie, quien no era todo lo que parecía.",
+    "music": "Takatsugu Muramatsu",
+    "writer": "Hiromasa Yonebayashi, Keiko Niwa, Masashi Ando",
+    "image": "https://play-lh.googleusercontent.com/yKGIWIUGbTXN6E-VfOkhyk4ODO1Q4FSpQBJdiodaEKviHTVWEKb-X2hpu4Xt4bXdjUk=w240-h480-rw"
     },
     {
     "id": "4",
     "title": "Mi vecino Totoro",
     "premiere": "1988-04-16",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"   
+    "director": "Hayao Miyazaki",
+    "description": "Japón, año 1958. El profesor universitario Tatsuo Kusakabe y sus dos hijas, Satsuki y Mei, se trasladan a una antigua residencia rural para estar más cerca del hospital donde la madre de las niñas, Yasuko, se recupera de tuberculosis. Satsuki y Mei descubren que la casa está habitada por diminutas criaturas de hollín llamadas susuwatari —espíritus pequeños, oscuros y similares al hollín que viven en lugares abandonados—. Cuando las niñas y su padre se sienten cómodos en su nueva casa y los susuwatari observan que son personas buenas, estos abandonan la residencia, presumiblemente en busca de otro sitio para vivir. Un día, Mei observa a una criatura similar a un conejo blanco y lo sigue por debajo de la casa. Luego descubre que en realidad se trata de un pequeño espíritu, que junto a otra criatura la conducen a través de un camino del bosque y posteriormente hasta el hueco de un gran árbol de alcanfor. Allí, conoce y se hace amiga de una versión mucho más grande del mismo tipo de espíritu, a quien ella identifica como «Totoro» con base de una serie de rugidos que este emite. Mei cae dormida, y al despertar se encuentra de nuevo en el patio de su casa. A pesar de sus muchos intentos, Mei es incapaz de mostrar el árbol de Totoro a su familia. Su padre la conforta diciéndole que Totoro era el «guardián del bosque» y que se dejaría ver cuando él lo quisiera.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://es.web.img3.acsta.net/medias/nmedia/18/70/26/45/20236853.jpg" 
     },
     {
     "id": "5",
     "title": "El castillo en el cielo",
     "premiere": "1986-08-02",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hayao Miyazaki",
+    "description": "Una aeronave se desliza sobre un mar de nubes, en una noche de luna llena. Muska, un agente secreto del gobierno, acompaña a una joven llamada Sheeta. Repentinamente la nave es atacada por piratas dirigidos por la capitana Dola que, al igual que el gobierno, buscan el secreto de la piedra que Sheeta lleva colgada alrededor de su cuello. En el caos que se origina, Sheeta intenta escapar por la ventana y cae del dirigible, sin embargo, su descenso es frenado por un misterioso poder dentro de la piedra. Sheeta aterriza a salvo en un pequeño pueblo minero, donde es encontrada por un niño llamado Pazu, quien la lleva a su hogar para su mejoría. Al día siguiente, Sheeta recupera el conocimiento y Pazu le cuenta acerca de una misteriosa isla flotante llamada Laputa, la cual puede apreciarse en una fotografía tomada por su fallecido padre. Más adelante, ambos niños son encontrados y perseguidos por los piratas de Dola, y posteriormente por los soldados de Muska. Mientras huyen, el dúo cae en una mina abandonada, donde se encuentran con el excéntrico Abuelo Pomme, un anciano del pueblo. Pomme les informa que el amuleto de Sheeta está hecho de cristal 'volucite', un material usado para mantener a Laputa y otras antiguas ciudades flotando en el cielo.",
+    "music": "Joe Hisaish",
+    "writer": "Hayao Miyazaki",
+    "image": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABR0ow98NGkkaRFrRSg1IY7RuE9wyg5noC9HMfftM2vI5AvItBYsg5oJJJLBc4ikY9j_TExYp-z8pXXnLg8zNEoSM72EUSz5IemSO.jpg?r=862"
     },
     {
     "id": "6",
     "title": "Kiki: entregas a domicilio",
     "premiere": "1989-07-29",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"   
+    "director": "Hayao Miyazaki",
+    "description": "Según la tradición de las brujas, cuando estas cumplen los trece años deben abandonar la casa de sus padres y buscar una ciudad donde sus servicios sean requeridos, y quedarse allí durante un año. De esta manera, Kiki comenzará el camino que la llevará a convertirse definitivamente en bruja. Este viaje lo realiza junto a su amigo Jiji, un gato negro muy simpático, y montada en su escoba voladora. Su viaje inicial la llevará a instalarse en una ciudad marítima donde comenzará a conocer el mundo y a conocerse a sí misma. Durante su viaje conocerá a grandes amigos, como Tombo u Osono.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki, Eiko Kadono",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbWSNkT7QE9YYLRVD4i--VIiBaTgvYEHrJAw&s"   
     },
     {
     "id": "7",
     "title": "El viaje de Chihiro",
     "premiere": "2001-07-20",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"   
+    "director": "Hayao Miyazaki",
+    "description": "Chihiro y sus padres se están mudando a otra ciudad, un hecho que la niña encuentra molesto al no estar de acuerdo con el cambio y no duda en demostrarlo con su falta de ánimo y mal humor. Durante el trayecto, su padre decide tomar un atajo para ahorrar tiempo, pero solo consiguen internarse en un bosque y encontrarse frente a un estrecho y extraño túnel. Sus padres deciden bajar del automóvil para explorarlo, aunque Chihiro se muestra reticente a ello. En el otro lado del túnel, la familia descubre un pueblo aparentemente abandonado que su padre razona es uno de los tantos parques de atracciones que se inauguraron y quebraron rápidamente años atrás en Japón. Mientras la familia recorre el lugar buscando a alguien que los oriente, encuentran puestos al aire libre donde se detienen a comer; sin embargo, al no encontrar quien los atienda, deciden tomar los alimentos servidos sin permiso, razonando que al tener dinero para pagar pueden hacerlo. Chihiro decide alejarse para continuar investigando y se encuentra con un misterioso joven llamado Haku, quien le alerta que debe llevarse a sus padres y huir antes de que anochezca, lo que sucederá en pocos minutos.",
+    "music": "Joe Hisaishi, Yumi Kimura",
+    "writer": "Hayao Miyazaki",
+    "image": "https://2.bp.blogspot.com/-Z1PyOCXwdEk/W-mJ4Jg_zhI/AAAAAAAAQCE/tWkWFrgmXik3EdcoEUUc0rmNAxQem7esACLcBGAs/s1600/el-viaje-de-chihiro_1.jpg"   
     },
     {
     "id": "8",
     "title": "El cuento de la princesa Kaguya",
     "premiere": "2013-11-23",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x" 
+    "director": "Isao Takahata",
+    "description": "La historia comienza cuando una pareja de ancianos campesinos encuentran a una niña diminuta dentro de una planta de bambú y deciden adoptarla como su hija. Convertida rápidamente en una hermosa mujer, es pretendida por muchos hombres, incluido el emperador. Sin embargo, su inicial júbilo se ve reducido a tristeza, pues asegura que vendrán por ella las personas de la Luna, lugar del que es originaria.",
+    "music": "Joe Hisaishi",
+    "writer": "Isao Takahata, Riko Sakaguchi",
+    "image": "https://www.periodicolapislazuli.com/noticias/wp-content/uploads/2018/12/kaguya.jpg" 
     },
     {
     "id": "9",
-    "title": "La princesa mononoke",
-    "premiere": "1997-07-12",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x" 
+    "title": "Nausicaä del Valle del Viento",
+    "premiere": "2009-06-07",
+    "director": "Hayao Miyazaki",
+    "description": "Mil años después de los Siete Días de Fuego, la humanidad sobrevive precariamente en un mundo devastado. La guerra provocó una contaminación generalizada que dio lugar a un bosque tóxico lleno de insectos mutantes gigantes. El Valle del Viento es un pequeño reino rodeado de otros reinos más poderosos y hostiles que suelen tener guerras entre ellos. En el Valle del Viento, rige una profecía que predice a un salvador que 'vestido de azul caminará sobre un campo de oro para unir los lazos con la Tierra y finalmente guiar al pueblo a las tierras purificadas'. Nausicaä es la princesa del Valle del Viento y única hija del rey Jihl, es gran piloto y guerrera y también compasiva y solícita de toda la vida. La princesa Nausicaä trata de encontrar un sentido del bosque contaminado y se resiste a ver a los insectos como enemigos, entre ellas las gigantescas criaturas trilobitas llamadas Ohm.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://i0.wp.com/lascronicasdedeckard.com/wp-content/uploads/2020/03/Nausicaa-Portada-Las-Crónicas-de-Deckard.jpg?fit" 
     },
     {
     "id": "10",
     "title": "Recuerdos del ayer",
     "premiere": "1991-07-20",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Isao Takahata",
+    "description": "Taeko Okajima es una joven asalariada de veintisiete años que pide permiso de vacaciones para poder regresar a su casa en el pueblo rural de su cuñado, y donde guarda tiernos momentos. En el transcurso de su viaje a la granja de sus familiares y a su posterior estancia, irá recordando su infancia, sus días en la escuela y otras vivencias peculiares, mientras vive intensamente su presente.",
+    "music": "Katsu Hoshi",
+    "writer": "Isao Takahata",
+    "image": "https://pics.filmaffinity.com/omohide_poro_poro-615376082-large.jpg"
     },
     {
     "id": "11",
     "title": "Porco Rosso",
     "premiere": "1992-07-18",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hayao Miyazaki",
+    "description": "Marco Pagot es un experimentado piloto militar italiano que, después de ver a un compañero morir en batalla, se convierte en víctima de un extraño hechizo que le hace tener apariencia de cerdo. Debido a esto y a que pilota un hidroavión carmín toma el nombre de Porco Rosso, convirtiéndose en un reconocido cazarrecompensas. A Porco le encanta frustrar los intentos de pillaje de las bandas de piratas que atacan en la costa del mar Adriático. Los piratas, cansados del boicot de Porco, deciden contraatacar contratando a un aventurero estadounidense cuyo objetivo es vencer a Porco Rosso.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://trashyoiks.wordpress.com/wp-content/uploads/2021/08/mv5bzjvkymfkzwqtzmnjyy00nmfhltlimwytnthlotuxnjg5oddhxkeyxkfqcgdeqxvymtmxodk2otu40._v1_.jpg"
     },
     {
     "id": "12",
     "title": "Ponyo",
     "premiere": "2009-07-23",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x"
+    "director": "Hayao Miyazaki",
+    "description": "Fujimoto, un hechicero y científico que alguna vez fue humano, vive bajo la superficie marina junto a su hija, Brunilda, y sus numerosas hermanas. Un día, mientras Fujimoto y sus hijas se encuentran en una excursión en su submarino, Brunilda se escabulle de la vista de su padre y se aleja nadando sobre una medusa. Después de haber sido arrastrada por una red de pesca, Brunilda termina atrapada en un frasco de vidrio. El frasco llega a la orilla de un pequeño pueblo pesquero, donde es encontrada y rescatada por un niño de cinco años llamado Sōsuke. El pequeño encuentra difícil sacarla del frasco, por lo que decide romperlo con una roca, accidentalmente cortándose su dedo. Brunilda lame su herida, la cual se cura casi instantáneamente para gran sorpresa de Sōsuke. Sōsuke cree que Brunilda simplemente es un pez y le toma un gran cariño, además de nombrarla 'Ponyo' y prometerle que la protegerá por siempre. Mientras tanto, un desesperado Fujimoto busca frenéticamente a su hija desaparecida. Debido a sus experiencias desagradables del mundo humano, cree que Sōsuke la ha secuestrado y que está en grave peligro, por lo que Fujimoto convoca a espíritus del océano para recuperarla. Después de que los espíritus se llevan a Ponyo, un desconsolado Sōsuke vuelve a casa con su madre, Lisa, quien trata de animarlo.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://i.pinimg.com/736x/4e/3d/80/4e3d805bb3c46870f79e6b9e4a345b5b.jpg"
     },
     {
     "id": "13",
     "title": "El increible castillo vagabundo",
     "premiere": "2004-09-05",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x" 
+    "director": "Hayao Miyazaki",
+    "description": "Sophie es una joven sombrerera cuyo camino se cruza con el de un excéntrico mago llamado Howl, mientras se proponía a visitar a su hermana, Lettie. Al regresar conoce a la Bruja del Páramo, quien le lanza un hechizo que la transforma en una mujer de noventa años. Buscando romper la maldición, Sophie abandona su hogar y comienza a recorrer el país. Posteriormente se encuentra con un espantapájaros, a quien ella decide llamar 'Cabeza de Nabo'. El espantapájaros la conduce al castillo ambulante de Howl, donde conoce al joven aprendiz de Howl, Markl, y al demonio del fuego, Calcifer, quien es la fuente de la energía del castillo. Cuando Howl llega, Sophie anuncia que Calcifer la dejó entrar y que había sido contratada por sí misma como la señora de la limpieza.",
+    "music": "Joe Hisaishi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJN3ERkZUp-_46ZoZ_C5KmtOXbIjBXTbr9Fg&s" 
     },
     {
     "id": "14",
     "title": "Earwig y la bruja",
     "premiere": "2020-10-18",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x" 
+    "director": "Goro Miyazaki",
+    "description": "Earwing adora vivir en el orfanato, algo que no les pasa a todos los huérfanos. Allí, ella tiene todo lo que puede necesitar, pero todo cambia cuando Bella Yaga y la Mandrágora visitan el lugar disfrazados de padres adoptivos. Al llegar a su nuevo domicilio, se encuentra con magia, pociones y habitaciones invisibles, y decide investigar qué es lo que ocurre y demostrar quién es el que manda en ese lugar.",
+    "music": "Satoshi Takebe",
+    "writer": "Keiko Miwa, Emi Gunji",
+    "image": "https://es.web.img2.acsta.net/c_310_420/pictures/21/03/31/13/32/2351623.png"
     },
     {
     "id": "15",
     "title": "Susurros del corazon",
     "premiere": "1995-07-15",
-    "director": "x",
-    "description": "x",
-    "music": "x",
-    "writer": "x" 
+    "director": "Yoshifumi Kondō",
+    "description": "Shizuku Tsukishima es una estudiante de 14 años en el colegio Mukaihara. Vive en Tokio con sus padres Asako y Seiya, y su hermana mayor Shiho. Shizuku es un ratón de biblioteca y le encanta escribir. Durante una noche ordinaria, revisando las fichas de préstamo de los libros que sacó de la biblioteca descubre que todos han sido previamente prestados a alguien llamado Seiji Amasawa",
+    "music": "Yūji Nomi",
+    "writer": "Hayao Miyazaki",
+    "image": "https://i0.wp.com/studioghibliweblog.es/wp-content/uploads/2019/08/susurros-vertigo.jpeg?w=110" 
     }
 ]

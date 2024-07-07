@@ -20,10 +20,22 @@
         <section id="formContainer">
             <form action="/users/update/{{user.id}}" method="post">
                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                <input type="text" name="username" placeholder="Ingrese un nombre de usuario" value="{{ user.username }}">
-                <input type="text" name="email" placeholder="Ingrese un email" value="{{ user.email}}">
-                <input type="password" name="password" placeholder="Ingrese una contraseña">    
-                <input type="password" name="password2" placeholder="Repita la contraseña"> 
+                <div>
+                    <label for="txtUsername">Nombre de usuario</label>
+                    <input type="text" name="username" placeholder="Ingrese un nombre de usuario" value="{{ user.username }}">
+                </div>
+                <div>
+                    <label for="txtEmail">Email</label>
+                    <input type="text" name="email" placeholder="Ingrese un email" value="{{ user.email}}">
+                </div>
+                <div>
+                    <label for="txtPassword">Contraseña</label>
+                    <input type="password" name="password" placeholder="Ingrese una contraseña">  
+                </div>
+                <div>
+                    <label for="txtPassword2">Repita la Contraseña</label>
+                    <input type="password" name="password2" placeholder="Repita la contraseña">
+                </div> 
                 <div id="submitButton">
                     <input class="btn" type="submit" value="Guardar">
                 </div>

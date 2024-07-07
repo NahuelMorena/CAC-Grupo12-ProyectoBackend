@@ -2,10 +2,12 @@ from flask import Blueprint, render_template, request, redirect, url_for, jsonif
 from app.models.movie import Movie
 from app.utils.db import db
 from flask_login import login_required
+from app.utils.validator import validate_form
 
 movies = Blueprint('movies', __name__)
 
 path = '/movies'
+required_fields = ['title', 'premiere', 'director', 'description', 'music', 'writer', 'image']
 
 @movies.route(path)
 @login_required
@@ -16,7 +18,7 @@ def index():
 @movies.route(path +'/new', methods=['POST'])
 @login_required
 def new():
-    if not validate_movie_form(request.form):
+    if not validate_form(request.form, required_fields):
         flash("Error! Todos los campos deben estar completos.", "error")
         return redirect(url_for('movies.index'))
 
@@ -26,8 +28,9 @@ def new():
     description = request.form['description']
     music = request.form['music']
     writer = request.form['writer']
+    image = request.form['image']
 
-    movie = Movie(title,premiere,director,description,music,writer)
+    movie = Movie(title,premiere,director,description,music,writer,image)
 
     db.session.add(movie)
     db.session.commit()
@@ -41,7 +44,7 @@ def new():
 def update(id):
     movie = Movie.query.get(id)
     if request.method == 'POST':
-        if not validate_movie_form(request.form):
+        if not validate_form(request.form,required_fields):
             flash("Error! Todos los campos deben estar completos.", "error")
             return render_template('movies/update.html', movie = movie)
             #return redirect(url_for('movies.index'))
@@ -70,23 +73,13 @@ def delete(id):
     if not movie:
         flash("Error! La pelicula a borrar no se encontro", "error")
         return redirect(url_for('movies.index'))
-        #return jsonify({'error': 'Movie not found'}), 404
-    
     if movie.locations:
         flash("Error! No se puede borrar esta pelicula por que cuenta con localidades en el sistema!", "error")
-        #return jsonify({'error': 'No se puede borrar esta pelicula por que cuentas con localidades en el sistema'}), 400
         return redirect(url_for('movies.index'))
+    
     db.session.delete(movie)
     db.session.commit()
 
     flash("Pelicula borrada satisfactoriamente!", "success")
 
     return redirect(url_for('movies.index'))
-
-def validate_movie_form(form):
-    required_fields = ['title', 'premiere', 'director', 'description', 'music', 'writer']
-    for field in required_fields:
-        if not form.get(field):
-            return False
-    return True
-

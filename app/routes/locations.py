@@ -3,10 +3,12 @@ from app.models.location import Location
 from app.models.movie import Movie
 from app.utils.db import db
 from flask_login import login_required
+from app.utils.validator import validate_form
 
 locations = Blueprint('locations', __name__)
 
 path = '/location'
+required_fields = ['name', 'climate', 'terrain', 'image', 'id_movie']
 
 @locations.route(path)
 @login_required
@@ -18,7 +20,7 @@ def index():
 @locations.route(path+'/new', methods=['POST'])
 @login_required
 def new():
-    if not validate_location_form(request.form):
+    if not validate_form(request.form,required_fields):
         flash("Error! Todos los campos deben estar completos.", "error")
         return redirect(url_for('locations.index'))
     
@@ -42,26 +44,21 @@ def new():
 def update(id):
     location = Location.query.get(id)
     if request.method == 'POST':
-        if not validate_location_form(request.form):
+        if not validate_form(request.form, required_fields):
             flash("Error! Todos los campos deben estar completos.", "error")
-            #return redirect(url_for('locations.index'))
-            movies = Movie.query.all()
-            return render_template('locations/update.html', location = location, movies = movies)
-        
-        location.name = request.form['name']
-        location.climate = request.form['climate']
-        location.terrain = request.form['terrain']
-        location.image = request.form['image']
-        location.id_movie = request.form['id_movie']
+        else:
+            location.name = request.form['name']
+            location.climate = request.form['climate']
+            location.terrain = request.form['terrain']
+            location.image = request.form['image']
+            location.id_movie = request.form['id_movie']
 
-        db.session.commit()
-
-        flash("Localización actualizada satisfactoriamente!!", "success")
-
-        return redirect(url_for('locations.index'))
-    else:
-        movies = Movie.query.all()
-        return render_template('locations/update.html', location = location, movies = movies)
+            db.session.commit()
+            flash("Localización actualizada satisfactoriamente!!", "success")
+            return redirect(url_for('locations.index'))
+    
+    movies = Movie.query.all()
+    return render_template('locations/update.html', location = location, movies = movies)
 
 @locations.route(path+'/delete/<id>')
 @login_required
@@ -73,10 +70,3 @@ def delete(id):
     flash("Localización borrada satisfactoriamente!!", "success")
 
     return redirect(url_for('locations.index'))
-
-def validate_location_form(form):
-    required_fields = ['name', 'climate', 'terrain', 'image', 'id_movie']
-    for field in required_fields:
-        if not form.get(field):
-            return False
-    return True

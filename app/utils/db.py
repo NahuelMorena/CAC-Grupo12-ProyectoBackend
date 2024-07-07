@@ -40,7 +40,7 @@ def load_users():
 def load_movies():
     from app.models.movie import Movie
     from datetime import datetime
-    with open('app/static/movies.json', 'r') as f:
+    with open('app/static/movies.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
         for item in data:
@@ -52,7 +52,8 @@ def load_movies():
                 director = item['director'],
                 description = item['description'],
                 music = item['music'],
-                writer = item['writer']
+                writer = item['writer'],
+                image = item['image']
             )
             db.session.add(movie)
         db.session.commit()
