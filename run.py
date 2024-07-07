@@ -15,7 +15,7 @@ args = parser.parse_args()
 with app.app_context():
     from app.models.movie import Movie
     from app.models.location import Location
-
+    
     db.create_all()
 
     if args.command == 'load_data':

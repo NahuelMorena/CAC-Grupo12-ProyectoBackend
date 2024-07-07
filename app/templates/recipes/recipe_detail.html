@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Recipe Detail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/recipe_detail.css">
+    <link rel="stylesheet" href="../../static/css/nav-style.css">
+
+
+</head>
+
+<body>
+    <header id="header">
+        <!-- place navbar here -->
+    </header>
+    <main>
+
+        <!--Contenedor-->
+        <div id="app" class="container">
+            <br>
+
+            <!--V-IF="error"-->
+            <div v-if="error">
+                <p>Lo sentimos, ocurrió un error al cargar la receta.</p>
+            </div>
+
+            <!--V-else-->
+            <div v-else>
+
+                <!--Section V-if-->
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando...</p>
+                </section>
+
+                <!--Section V-else-->
+                <section v-else>
+                    <div class="wprm-recipe-container">
+
+                        <div class="wprm-recipe wprm-recipe-template-compact">
+
+                            <!--V-for="recipe in recipes"-->
+                            <div>
+                                
+                                <div class="wprm-container-float-right">
+
+                                    <div class="wprm-recipe-image wprm-block-image-normal">
+                                        <img loading="lazy" decoding="async"
+                                            style="/*border-width: 0 px; */border-style: solid;border-color: #666666;"
+                                            width="300" height="200" :src="recipe.imagen" class="card-img-top"
+                                            :alt="recipe.nombre">
+                                    </div>
+
+                                    <div class="wprm-spacer" style="height: 5px;"></div>
+                                </div>
+                                <h1 class="wprm-recipe-name wprm-block-text-bold">{{ recipe.nombre }}</h1>
+                                <div class="wprm-spacer" style="height: 5px"></div>
+                                <h2 class="card-text">{{ recipe.pelicula }}</h2>
+
+                                <div class="wprm-recipe-summary wprm-block-text-normal">
+                                    <span style="display: block;">{{recipe.descripcion}}</span>
+                                </div>
+                                <div class="wprm-spacer" style="height: 5px"></div>
+                                <div class="wprm-recipe-meta-container wprm-recipe-times-container wprm-recipe-details-container wprm-recipe-details-container-table wprm-block-text-normal wprm-recipe-table-borders-top-bottom wprm-recipe-table-borders-inside"
+                                    style="border-width: 1px;border-style: solid; border-color: #777777;">
+
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="wprm-recipe-equipment-container wprm-block-text-normal">
+                                        <h3
+                                            class="wprm-recipe-header wprm-recipe-equipment-header wprm-block-text-bold wprm-align-left wprm-header-decoration-none">
+                                            Ingredientes:
+                                        </h3>
+                                        <ul class="wprm-recipe-equipment wprm-recipe-equipment-list">
+                                            <li class="wprm-recipe-equipment-item" style="list-style-type: disc;"
+                                                v-for="ingrediente in ingredientesArray" :key="ingrediente">{{
+                                                ingrediente
+                                                }}
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="wprm-recipe-ingredients-container wprm-recipe-752-ingredients-container wprm-block-text-normal wprm-ingredient-style-regular wprm-recipe-images-before"
+                                        data-recipe="752" data-servings="1">
+                                        <h3 class="wprm-recipe-header wprm-recipe-ingredients-header wprm-block-text-bold wprm-align-left wprm-header-decoration-none"
+                                            style> Instrucciones</h3>
+                                        <div class="wprm-recipe-ingredient-group">
+                                            <ol class="wprm-recipe-ingredients">
+                                                <li class="wprm-recipe-ingredient" style="list-style-type: disc;"
+                                                    v-for="instruccion in instruccionesArray" :key="instruccion">
+
+                                                    {{ instruccion }}
+                                                </li>
+                                            </ol>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <button type="button" class="btn btn-danger" v-on:click="eliminar(recipe.id)">
+                                    Eliminar
+                                </button>
+                                <a class="btn btn-primary" :href="'recipe_update.html?id='+ recipe.id" >Editar</a>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Link de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <!-- Link de Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../../static/js/recipe_detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "nombre": "Desayuno de Howl",
+        "pelicula": "El Castillo Ambulante",
+        "imagen": "https://www.seriouseats.com/thmb/x6dcqHE-keGtGRMbwaEJqKxHeeQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2020__07__20200715-studio-ghibli-Howls_BaconEggs1500-ebebd31467c24b89af81d18bc73f638e.jpg",
+        "ingredientes": [
+          "4 tiras de tocino",
+          "4 huevos",
+          "1 pan francés",
+          "Mantequilla"
+        ],
+        "instrucciones": [
+          "Freír las tiras de tocino en una sartén.",
+          "Romper los huevos en la sartén y cocinarlos junto con el tocino.",
+          "Tostar el pan francés y untarlo con mantequilla.",
+          "Servir el tocino y los huevos con el pan tostado."
+        ],
+        "descripcion": "Un delicioso y sencillo desayuno inspirado en la película El Castillo Ambulante."
+      },
+      {
+        "id": 2,
+        "nombre": "Panecillos de vapor",
+        "pelicula": "El Viaje de Chihiro",
+        "imagen": "https://thestarvingchefblog.com/wp-content/uploads/2023/02/tumblr_oscahqG05m1uq9b1ao5_1280.jpg",
+        "ingredientes": [
+          "Harina",
+          "Azúcar",
+          "Levadura",
+          "Agua",
+          "Sal"
+        ],
+        "instrucciones": [
+          "Mezclar la harina, el azúcar, la levadura y la sal.",
+          "Añadir agua poco a poco y amasar hasta obtener una masa suave.",
+          "Dejar reposar la masa hasta que doble su tamaño.",
+          "Formar panecillos y cocer al vapor durante 15-20 minutos."
+        ],
+        "descripcion": "Panecillos al vapor esponjosos y dulces que Chihiro disfruta en El Viaje de Chihiro."
+      },
+      {
+        "id": 3,
+        "nombre": "Pastel de Calabaza",
+        "pelicula": "Kiki: Entregas a Domicilio",
+        "imagen": "https://dotandline.net/wp-content/uploads/2018/07/1_SyB2zCpvs9l8yyKs4sZbag-1024x556.jpeg",
+        "ingredientes": [
+          "Masa de hojaldre",
+          "Pure de calabaza",
+          "Filetes de arenque",
+          "Cebolla",
+          "Nata"
+        ],
+        "instrucciones": [
+          "Precalentar el horno a 180°C.",
+          "Extender la masa de hojaldre en un molde.",
+          "Mezclar el puré de calabaza con cebolla picada y nata.",
+          "Colocar los filetes de arenque sobre la masa.",
+          "Verter la mezcla de calabaza sobre los filetes.",
+          "Hornear por 30-35 minutos hasta que la masa esté dorada y el relleno firme."
+        ],
+        "descripcion": "Un delicioso pastel de puerros que Kiki entrega en una de sus misiones."
+      },
+      {
+        "id": 4,
+        "nombre": "Onigiri",
+        "pelicula": "El Viaje de Chihiro",
+        "imagen": "https://sienasfoodandfilms.wordpress.com/wp-content/uploads/2020/11/chihiro-1.jpeg?w=1024",
+        "ingredientes": [
+          "Arroz",
+          "Alga nori",
+          "Sal",
+          "Salmón"
+        ],
+        "instrucciones": [
+          "Cocinar el arroz y dejar enfriar.",
+          "Formar bolas de arroz con un trozo de salmón en el centro.",
+          "Envolver con una tira de alga nori y espolvorear con sal."
+        ],
+        "descripcion": "Tradicionales onigiri japoneses que Chihiro recibe en un momento de consuelo."
+      },
+      {
+        "id": 5,
+        "nombre": "Ramen",
+        "pelicula": "Ponyo en el Acantilado",
+        "imagen": "https://aderezo.mx/wp-content/uploads/2023/08/8a950edc51ac4a6cb8c3d33d585458ec-1-1024x576.jpeg",
+        "ingredientes": [
+          "Fideos ramen",
+          "Caldo de pollo",
+          "Huevos",
+          "Cebolletas",
+          "Naruto (pastel de pescado)"
+        ],
+        "instrucciones": [
+          "Cocinar los fideos ramen según las instrucciones del paquete.",
+          "Calentar el caldo de pollo.",
+          "Cocinar los huevos y cortarlos en mitades.",
+          "Servir los fideos en un tazón, agregar el caldo caliente, los huevos, cebolletas y naruto."
+        ],
+        "descripcion": "Un plato de ramen delicioso que Sosuke y Ponyo disfrutan juntos."
+      }
+    ]
+  }
+  
+  

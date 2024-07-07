@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recetario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/icons8-totoro-480.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/nav-style.css">
+    <link rel="stylesheet" href="static/css/recipes/recipe2.css">
+</head>
+
+<body>
+    <!---navbar-->
+    <div id="navbarContainer"></div>
+
+    <main>
+        <div class="carrusel">
+            <ul>
+                <li>
+                    <img src="static/img/carrusel1.gif" alt="">
+                </li>
+                <li>
+                    <img src="static/img/carrusel2.gif" alt="">
+                </li>
+                <li>
+                    <img src="static/img/carrusel3.gif" alt="">
+                </li>
+            </ul>
+        </div>
+        <h1>¡BIENVENIDO AL RINCÓN DE LAS RECETAS DEL STUDIO GHIBLI!</h1>
+        <p id="subtitulo">
+            "Sumérgete en un mundo de sabores extraordinarios y crea tus propias aventuras culinarias con nuestras
+            detalladas guías inspiradas en las películas más queridas del Studio Ghibli."
+        </p>
+
+        <!--Contenedor-->
+        <div id="app" class="container">
+
+            <!--V-IF="error"-->
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+
+            <!--V-else-->
+            <div v-else>
+
+                <!--Section V-if-->
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+
+                <!--Section V-else-->
+                <section v-else>
+
+                    <div class="flex-container table-responsive">
+                        <table class="table table-bordered">
+
+                            <!--V-for="recipe in recipes"-->
+                            <div class="receta flip-card" v-for="recipe in recipes" :key="recipe.id">
+                                
+                                <a :href="'recipe_detail.html?id=' + recipe.id" class="button_general">
+                                    <!--CONTENEDOR TIPO A-->
+                                    <div class="contenedor_a">
+                                        <!--CONTENEDOR A1-->
+                                        <div class="subcontenedor_a1"
+                                            :style="{ 'background-image': 'url(' + recipe.imagen + ')' }">
+                                        </div>
+
+                                        <!--CONTENEDOR A2-->
+                                        <div class="subcontenedor_a2">
+                                            <div class="subcontenedor_a2_1">
+                                                <p class="nombre">{{ recipe.nombre }}</p>
+                                                <p class="pelicula">{{ recipe.pelicula }}</p>
+                                            </div>
+
+                                            <div class="subcontenedor_a2_2">
+                                                <p class="resumen-receta">{{ recipe.descripcion }}</p>
+                                                <a :href="'recipes/recipe_detail.html?id=' + recipe.id"
+                                                    class="btn btn-info mt-2 button_a">Ver mas</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </table>
+
+
+                    </div>
+
+
+            </div>
+            </section>
+            <div class="contenedor_agregar_receta">
+                <p class="descripcion_agregar_receta">¿Quieres compartir tu receta Ghibli favorita? ¡Envíanos la tuya ahora!</p>
+                <a class="btn btn-primary agregar_receta" href="recipes/receta_nueva.html">Nuevo</a>
+            </div>
+            
+        </div>
+
+        </div>
+
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="static/js/navigation.js"></script>
+    <script src="static/js/recipe.js"></script>
+</body>
+
+</html>
