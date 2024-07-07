@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="./img/icons8-totoro-480.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/nav-style.css">
     <link rel="stylesheet" href="static/css/recipes/recipe2.css">
 </head>
@@ -64,7 +65,7 @@
                             <!--V-for="recipe in recipes"-->
                             <div class="receta flip-card" v-for="recipe in recipes" :key="recipe.id">
                                 
-                                <a :href="'recipe_detail.html?id=' + recipe.id" class="button_general">
+                                <a :href="'recipes/recipe_detail.html?id=' + recipe.id" class="button_general">
                                     <!--CONTENEDOR TIPO A-->
                                     <div class="contenedor_a">
                                         <!--CONTENEDOR A1-->
