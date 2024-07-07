@@ -49,7 +49,8 @@ createApp({
                 .then(res => res.text()) // or res.json()
                 .then(res => {
                     alert('Registro Eliminado')
-                    location.reload(); // recarga el json luego de eliminado el registro
+                    window.location.href = "/recipes";
+                    //location.reload(); // recarga el json luego de eliminado el registro
                 })
         },
         
